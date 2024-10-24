@@ -1,18 +1,19 @@
 import { GoHomeFill } from 'react-icons/go'
-import { FaStopwatch } from 'react-icons/fa6'
+import { FaStopwatch, FaCircleUser } from 'react-icons/fa6'
+import { FaRegMap } from 'react-icons/fa'
 import { IoReceipt } from 'react-icons/io5'
-import { FaCircleUser } from 'react-icons/fa6'
 import { Link, useLocation } from 'react-router-dom'
 
 function BottomNavigation() {
   const location = useLocation()
 
   return (
-    <div className=":uno: fixed bottom-0 left-1/2 bg-[#07070d] border-t py-4 max-w-[430px] w-full -translate-x-1/2">
+    <div className=":uno: fixed bottom-0 left-1/2 bg-black border-t py-4 max-w-[430px] w-full -translate-x-1/2">
       <div className=":uno: container max-w-md mx-auto flex justify-between px-4">
         {[
           { icon: GoHomeFill, label: 'Home', to: '/' },
-          { icon: FaStopwatch, label: 'Parking Time', to: '/parking' },
+          { icon: FaStopwatch, label: 'Session', to: '/session' },
+          { icon: FaRegMap, label: 'Map', to: '/map' },
           { icon: IoReceipt, label: 'Tickets', to: '/tickets' },
           { icon: FaCircleUser, label: 'Profile', to: '/profile' }
         ].map(({ icon: Icon, label, to }) => {

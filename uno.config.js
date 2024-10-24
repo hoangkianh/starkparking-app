@@ -11,6 +11,9 @@ import {
 export default defineConfig({
   theme: {
     colors: {
+      black: {
+        DEFAULT: '#07070d'
+      },
       lime: { DEFAULT: '#EDFE56' },
       gray: {
         DEFAULT: '#9ca3af'
